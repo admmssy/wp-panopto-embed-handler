@@ -7,7 +7,7 @@
  * Author URI: http://twitter.com/admmssy
  */
 
-wp_embed_register_handler( 'panopto', '#http:\/\/(.*)Panopto\/Pages\/Viewer.*.aspx\?id=(.*)#i', 'wp_embed_handler_panopto' ); 
+wp_embed_register_handler( 'panopto', '#http:\/\/(.*)Panopto\/Pages\/Viewer.*.aspx\?id=(.*)#i', 'wp_embed_handler_panopto' );
 
 function wp_embed_handler_panopto( $matches, $attr, $url, $rawattr ) {
 	$embed  = '<iframe src="';
