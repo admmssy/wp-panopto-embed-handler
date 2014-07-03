@@ -1,11 +1,28 @@
-# wp-panopto-embed-handler
+=== Plugin Name ===
+Contributors: admmssy
+Tags: embed, panopto
+Requires at least: 2.9.0
+Tested up to: 3.9
+Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Easily embed Panopto sessions into your Wordpress sites
 
-Registers an embed handler for URLs to Panopto sessions and replaces them with the standard Panopto embed code
+== Description ==
 
-## Installation
-Copy to wp-content/plugins and activate
+Paste a URL to a Panopto session on its own line in your post, and it will be replaced with the embedded version. 
 
-## Usage
+== Installation ==
 
-Paste a URL to a Panopto session, in plain text and on its own line, and when you view the page/post the URL will be swapped out for the embedded version. 
+1. Download the ZIP file
+1. Unzip it and upload the folder to the `/wp-content/plugins/` directory
+1. Activate the plugin through the 'Plugins' menu in wordpress
+
+== Changelog ==
+
+= 0.2 =
+* Accommodate the new Panopto URL structure
+
+= 0.1 =
+* Initial version
