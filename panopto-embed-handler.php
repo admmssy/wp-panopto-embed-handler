@@ -10,9 +10,8 @@
 wp_embed_register_handler( 'panopto', '#http:\/\/(.*)Panopto\/Pages\/Viewer.*.aspx\?id=(.*)#i', 'wp_embed_handler_panopto' );
 
 function wp_embed_handler_panopto( $matches, $attr, $url, $rawattr ) {
-	$embed  = '<iframe src="';
-	$embed .= sprintf(
-		'http://%1$sPanopto/Pages/Embed/Default.aspx?id=%2$s&v=1',
+	$embed  = sprintf(
+  		'<iframe src="http://%1$sPanopto/Pages/Embed/Default.aspx?id=%2$s&v=1',
 		esc_attr($matches[1]),
 		esc_attr($matches[2])
 	);
