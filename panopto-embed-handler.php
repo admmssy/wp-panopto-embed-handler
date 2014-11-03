@@ -2,7 +2,6 @@
 /**
  * Plugin Name: Panopto Embed Handler
  * Description: Looks for URLs matching a Panopto session, and switches them out for the standard Panopto embed code
- * Version: 0.2
  * Author: Adam Massey
  * Author URI: http://twitter.com/admmssy
  */
