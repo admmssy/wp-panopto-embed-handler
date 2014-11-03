@@ -16,5 +16,5 @@ function wp_embed_handler_panopto_session( $matches, $attr, $url, $rawattr ) {
 	);
 	$embed .= '" width="450" height="300" frameborder="0"></iframe>';
 	
-	return apply_filters( 'embed_panopto', $embed, $matches, $attr, $url, $rawattr );
+	return apply_filters( 'embed_panopto_session', $embed, $matches, $attr, $url, $rawattr );
 }
