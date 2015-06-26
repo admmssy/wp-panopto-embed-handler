@@ -1,8 +1,8 @@
 === Plugin Name ===
+
 Contributors: admmssy
 Tags: embed, panopto
-Requires at least: 2.9.0
-Tested up to: 3.9
+Tested up to: 4.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,7 +11,7 @@ Easily embed Panopto sessions into your Wordpress sites
 
 == Description ==
 
-Paste a URL to a Panopto session on its own line in your post, and it will be replaced with the embedded version. 
+Paste a URL to a Panopto session on its own line in your post, and it will be replaced with the embedded version.
 
 == Installation ==
 
@@ -21,9 +21,11 @@ Paste a URL to a Panopto session on its own line in your post, and it will be re
 
 == Changelog ==
 
+= 0.3 =
+Embed folders
+
 = 0.2 =
-* Accommodate the new Panopto URL structure
-* 
+Accommodate the new Panopto URL structure
+
 = 0.1 =
-* Initial version
-*
+Initial version
