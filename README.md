@@ -16,13 +16,14 @@ Paste a URL to a Panopto session on its own line in your post, and it will be re
 == Installation ==
 
 1. Download the ZIP file
-1. Unzip it and upload the folder to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in wordpress
+2. Unzip it and upload the folder to the `/wp-content/plugins/` directory
+3. Activate the plugin through the 'Plugins' menu in wordpress
 
 == Changelog ==
 
 = 0.2 =
 * Accommodate the new Panopto URL structure
-
+* 
 = 0.1 =
 * Initial version
+*
