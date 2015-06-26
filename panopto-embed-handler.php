@@ -15,7 +15,7 @@ function wp_embed_handler_panopto_session( $matches, $attr, $url, $rawattr ) {
 		esc_attr($matches[2])
 	);
 	$embed .= '" width="450" height="300" frameborder="0"></iframe>';
-	
+
 	return apply_filters( 'embed_panopto_session', $embed, $matches, $attr, $url, $rawattr );
 }
 
@@ -28,8 +28,8 @@ function wp_embed_handler_panopto_folder( $matches, $attr, $url, $rawattr ) {
 		esc_attr($matches[1]),
 		esc_attr($matches[2])
 	);
-	$embed .= '" width="100%" height="900" frameborder="1"></iframe>'; 
-	
+	$embed .= '" width="100%" height="900" frameborder="0"></iframe>'; 
+
 	return $embed;
 	// return apply_filters( 'embed_panopto', $embed, $matches, $attr, $url, $rawattr );
 }
