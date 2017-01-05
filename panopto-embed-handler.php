@@ -6,15 +6,16 @@
  * Author URI: http://twitter.com/admmssy
  */
 
-wp_embed_register_handler( 'panopto_session', '#https?:\/\/(.*)Panopto\/Pages\/Viewer.*.aspx\?id=(.*)#i', 'wp_embed_handler_panopto_session' );
+wp_embed_register_handler( 'panopto', '#https?:\/\/(.*)Panopto\/Pages\/(Viewer|Viewer/Default).aspx\?id=(.*)#i', 'wp_embed_handler_panopto' );
 
-function wp_embed_handler_panopto_session( $matches, $attr, $url, $rawattr ) {
-	$embed  = sprintf(
-  		'<iframe src="http://%1$sPanopto/Pages/Embed/Default.aspx?id=%2$s&v=1',
+function wp_embed_handler_panopto( $matches, $attr, $url, $rawattr ) {
+	$embed  = '<iframe src="';
+	$embed .= sprintf(
+		'http://%1$sPanopto/Pages/Embed.aspx?id=%2$s&v=1',
 		esc_attr($matches[1]),
-		esc_attr($matches[2])
+		esc_attr($matches[3])
 	);
-	$embed .= '" width="450" height="300" frameborder="0"></iframe>';
+	$embed .= '" width="720" height="405" frameborder="0" allowfullscreen></iframe>';
 
-	return apply_filters( 'embed_panopto_session', $embed, $matches, $attr, $url, $rawattr );
+	return apply_filters( 'embed_panopto', $embed, $matches, $attr, $url, $rawattr );
 }
