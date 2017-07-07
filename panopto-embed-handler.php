@@ -19,10 +19,10 @@ function wp_embed_handler_panopto( $matches, $attr, $url, $rawattr ) {
 	}
 
 	if( isset( $rawattr[ 'height' ] ) ) {
-			$height = $rawattr[ 'height' ];
-		} else {
-			$height = 405;
-		}
+		$height = $rawattr[ 'height' ];
+	} else {
+		$height = 405;
+	}
 
 	$embed  = '<iframe src="';
 	$embed .= sprintf(
