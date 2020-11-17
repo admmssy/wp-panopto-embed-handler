@@ -26,7 +26,7 @@ function wp_embed_handler_panopto( $matches, $attr, $url, $rawattr ) {
 
 	$embed  = '<iframe src="';
 	$embed .= sprintf(
-		'http://%1$sPanopto/Pages/Embed.aspx?id=%2$s&v=1',
+		'//%1$sPanopto/Pages/Embed.aspx?id=%2$s&v=1',
 		esc_attr($matches[1]),
 		esc_attr($matches[3])
 	);
