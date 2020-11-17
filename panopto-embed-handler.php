@@ -34,3 +34,32 @@ function wp_embed_handler_panopto( $matches, $attr, $url, $rawattr ) {
 
 	return apply_filters( 'embed_panopto', $embed, $matches, $attr, $url, $rawattr );
 }
+
+wp_embed_register_handler( 'panopto_list', '#https?:\/\/(.*)Panopto\/Pages\/Sessions\/List.aspx\?folderID=(.*)#i', 'wp_embed_handler_panopto_list' );
+
+function wp_embed_handler_panopto_list( $matches, $attr, $url, $rawattr ) {
+
+	// If the [embed] is specifying width and/or height, pass those through.
+	// Otherwise default to the values in Panopto's embed code
+	if( isset( $rawattr[ 'width' ] ) ) {
+		$width = $rawattr[ 'width' ];
+	} else {
+		$width = '100%';
+	}
+
+	if( isset( $rawattr[ 'height' ] ) ) {
+		$height = $rawattr[ 'height' ];
+	} else {
+		$height = 900;
+	}
+
+	$embed  = '<iframe src="';
+	$embed .= sprintf(
+		'//%1$sPanopto/Pages/EmbeddedList.aspx?folderID=%2$s&v=1',
+		esc_attr($matches[1]),
+		esc_attr($matches[2])
+	);
+	$embed .= '" width="' . $width . '" height="' . $height . '" frameborder="0" allowfullscreen></iframe>';
+
+	return apply_filters( 'embed_panopto', $embed, $matches, $attr, $url, $rawattr );
+}
