@@ -35,7 +35,7 @@ function wp_embed_handler_panopto( $matches, $attr, $url, $rawattr ) {
 	return apply_filters( 'embed_panopto', $embed, $matches, $attr, $url, $rawattr );
 }
 
-wp_embed_register_handler( 'panopto_podcast', '#https?:\/\/(.*)Panopto\/Podcast\/(.*)#i', 'wp_embed_handler_panopto_podcast' );
+wp_embed_register_handler( 'panopto_podcast', '#https?:\/\/(.*)Panopto\/Podcast\/(StreamInBrowser|Download)\/(.*)#i', 'wp_embed_handler_panopto_podcast' );
 
 function wp_embed_handler_panopto_podcast( $matches, $attr, $url, $rawattr ) {
 	$audio = sprintf( '<audio style="visibility:visible;" src="%s" controls="controls">', esc_url( $url ) );
