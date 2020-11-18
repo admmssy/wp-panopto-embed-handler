@@ -35,7 +35,7 @@ function wp_embed_handler_panopto( $matches, $attr, $url, $rawattr ) {
 	return apply_filters( 'embed_panopto', $embed, $matches, $attr, $url, $rawattr );
 }
 
-wp_embed_register_handler( 'panopto_list', '#https?:\/\/(.*)Panopto\/Pages\/Sessions\/List.aspx\?folderID=(.*)#i', 'wp_embed_handler_panopto_list' );
+wp_embed_register_handler( 'panopto_list', '#https?:\/\/(.*)Panopto\/Pages\/Sessions\/List\.aspx(\?|\#)folderID=(.*)#i', 'wp_embed_handler_panopto_list' );
 
 function wp_embed_handler_panopto_list( $matches, $attr, $url, $rawattr ) {
 
@@ -57,7 +57,7 @@ function wp_embed_handler_panopto_list( $matches, $attr, $url, $rawattr ) {
 	$embed .= sprintf(
 		'//%1$sPanopto/Pages/EmbeddedList.aspx?folderID=%2$s&v=1',
 		esc_attr($matches[1]),
-		esc_attr($matches[2])
+		esc_attr($matches[3])
 	);
 	$embed .= '" width="' . $width . '" height="' . $height . '" frameborder="0" allowfullscreen></iframe>';
 
